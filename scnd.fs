@@ -9,7 +9,7 @@ let rec getlist() =
             let n = int s 
             n :: getlist()
         else
-            printfn "Ошибка: введена не цифра или больше одного символа! Иди нафиг."
+            printfn "Ошибка: введена не цифра или больше одного символа!"
             getlist() 
 
 
@@ -31,7 +31,7 @@ let rus_words n =
 
 [<EntryPoint>]
 let main argv = 
-    printfn "Вводите цифры по одной (после каждой Enter). Чтобы закончить, просто нажмите Enter еще раз:"
+    printfn "Вводите цифры по одной:"
     
     let myList = getlist()
 
