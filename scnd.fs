@@ -9,38 +9,36 @@ let rec getlist() =
             let n = int s 
             n :: getlist()
         else
-            printfn "Ошибка: введена не цифра или больше одного символа!"
+            printfn "Ошибка!"
             getlist() 
-
 
 let rus_words n = 
     match n with
 
-    | 0 -> "ноль"  
+    | 0 -> "ноль" 
     | 1 -> "один" 
-    | 2 -> "два"
+    | 2 -> "два" 
     | 3 -> "три"   
     | 4 -> "четыре" 
-    | 5 -> "пять"
+    | 5 -> "пять" 
     | 6 -> "шесть" 
     | 7 -> "семь" 
-    | 8 -> "восемь"
+    | 8 -> "восемь" 
     | 9 -> "девять"
     | _ -> "???"
 
 [<EntryPoint>]
 let main argv = 
-    printfn "Вводите цифры по одной:"
-    
+    printfn "Вводите цифры:"
     let myList = getlist()
 
-    let words = myList |> List.map rus_words
-    
-    printfn "Ваш список чисел: %A" myList
-    printfn "Результат: «%A»" words
+    let resultString = 
+        myList 
+
+        |> List.map rus_words 
+        |> List.fold (fun all word -> all + " " + word) ""
+
+    printfn "Ваш список: %A" myList
+    printfn "Результат через fold: %s" resultString
 
     0
-
-
-
-
