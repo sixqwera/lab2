@@ -21,7 +21,8 @@ main:
 ### Тестирование
 
 
-<img width="849" height="55" alt="image" src="https://github.com/user-attachments/assets/7f03b86d-7811-48f2-b5ab-f4d8f924647b" />
+<img width="521" height="210" alt="image" src="https://github.com/user-attachments/assets/f2b4d96e-365f-4806-b019-41b41e1cb34d" />
+
 
 
 
