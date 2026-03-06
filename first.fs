@@ -19,9 +19,9 @@ let main argv =
     printfn "Вводите числа:"
     
     let numbers = getlist()
-    let aftertoBin = numbers |> List.map toBin
+    let afterToBin = numbers |> List.map toBin
 
     printfn "Числа %A" numbers
-    printfn "Двоичная запись чисел %A" aftertoBin
+    printfn "Двоичная запись чисел %A" afterToBin
 
     0
