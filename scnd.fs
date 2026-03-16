@@ -35,11 +35,14 @@ let main argv =
     printfn "Вводите цифры:"
     let myList = getList()
 
-    let resultString = 
-        myList 
-        |> List.fold (fun all n -> all + " " + rusWords n) ""
+    let words =
+        List.foldBack (fun num all ->
+            (rusWords num) :: all
+        ) myList []
+
+
 
     printfn "Ваш список: %A" myList
-    printfn "Результат через fold: %s" (resultString.Trim())
+    printfn "Результат через fold: %A" words
 
     0
