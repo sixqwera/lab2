@@ -36,8 +36,8 @@ let main argv =
     let myList = getList()
 
     let words =
-        List.foldBack (fun num all ->
-            (rusWords num) :: all
+        List.foldBack (fun num acc ->
+            (rusWords num) :: acc
         ) myList []
 
 
